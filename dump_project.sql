@@ -32,15 +32,6 @@ CREATE TABLE `rooms` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `rooms`
---
-
-LOCK TABLES `rooms` WRITE;
-/*!40000 ALTER TABLE `rooms` DISABLE KEYS */;
-/*!40000 ALTER TABLE `rooms` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `sensors`
 --
 
@@ -48,22 +39,13 @@ DROP TABLE IF EXISTS `sensors`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `sensors` (
-  `sensor_id` smallint(6) NOT NULL AUTO_INCREMENT,
+  `sensor_id` smallint(6) NOT NULL,
   `sensor_type` varchar(255) NOT NULL,
   `sensor_value` int(11) NOT NULL,
   `time_stamp` datetime DEFAULT current_timestamp(),
-  PRIMARY KEY (`sensor_id`)
+  `sensor_unit` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `sensors`
---
-
-LOCK TABLES `sensors` WRITE;
-/*!40000 ALTER TABLE `sensors` DISABLE KEYS */;
-/*!40000 ALTER TABLE `sensors` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -74,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-13 19:43:27
+-- Dump completed on 2021-10-27 16:29:25
